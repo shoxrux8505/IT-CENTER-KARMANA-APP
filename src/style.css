@@ -1,0 +1,30 @@
+:root {
+
+  --text-color: #6f6f6f;
+  --text-color2: #89cc29;
+  --bg-color: #323232;
+  --dark-bg: #242526;
+  --icon-bg: #E7F5FB;
+  --h1-size: 50px;
+  --milk-shike: #fffff3;
+
+
+}
+
+
+
+* {
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  user-select: none;
+  caret-color: var(--main_color);
+}
+
+
+body {
+  background: var(--milk-shike);
+  overflow-x: hidden ;
+}

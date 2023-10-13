@@ -1,0 +1,39 @@
+
+:root {
+
+    --text-color: #6f6f6f;
+    --text-color2: #89cc29;
+    --bg-color: #323232;
+    --dark-bg: #242526;
+    --icon-bg: #E7F5FB;
+    --h1-size: 50px;
+    --outline-color: #a9df5eb7;
+
+}
+
+
+.nav{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--text-color2);
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.nav ul li{
+    font-weight: 700;
+}
+
+.nav ul li a{
+    color: var(--icon-bg);
+    font-size: 20px;
+    font-weight: 500;
+}
