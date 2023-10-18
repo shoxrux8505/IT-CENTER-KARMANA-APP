@@ -19,7 +19,8 @@
     "vue-future-slider": "^1.0.5",
     "vue-loading-overlay": "6.0",
     "vue-resource": "^1.5.3",
-    "vue3-carousel": "^0.3.1"
+    "vue3-carousel": "^0.3.1",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

@@ -20,27 +20,18 @@
         >
         </lord-icon> -->
       </button>
-      <ul class="dropdown">
-        <li>
-          <lord-icon src="https://cdn.lordicon.com/fwafvpnq.json" trigger="loop"
-            colors="primary:#ffffff,secondary:#08a88a" style="width: 50px; height: 50px">
-          </lord-icon>Aloqa markazi:<a href="#">939621361</a>
-        </li>
-        <li>
-          <lord-icon src="https://cdn.lordicon.com/zzcjjxew.json" trigger="loop"
-            colors="primary:#ffffff,secondary:#08a88a" style="width: 50px; height: 50px">
-          </lord-icon>Markaz Manzil <a class="manzil" href="#">Eski Shahar Telegraph</a>
-        </li>
-        <li>
-          <lord-icon src="https://cdn.lordicon.com/qhgmphtg.json" trigger="loop" delay="6000"
-            colors="primary:#ffffff,secondary:#08a88a" style="width:50px;height:50px">
-          </lord-icon>
-          Ish vaqti:.. <a class="time-work" href="#">Tues-Sat: 8:00-18:00 Mon-Fri: 8:00-20:00 </a>
-
-        </li>
-      </ul>
+      <div class="menu-bar">
+        <button class="bar" @click="toggleMenu"> <ion-icon name="menu-outline"></ion-icon></button>
+      </div>
     </div>
   </div>
+  <ul v-if="menuOpen" class="menu">
+    <li><a :href="'#loyiha'">LOYIHALAR</a></li>
+    <li><a :href="'#kurslar'">KURSLAR</a></li>
+    <li><a :href="'#'">YANGILIKLAR</a></li>
+    <li><a :href="'#team'">XODIMLAR</a></li>
+    <button> <a href="#form">Kursga yozilish</a></button>
+  </ul>
 </template>
 
 <script>
@@ -50,16 +41,105 @@ export default {
   components: {
     // have not
   },
+  data() {
+    return {
+      menuOpen: false
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen
+    }
+  }
 };
 </script>
 
 <style>
+:root {
+
+  --text-color: #6f6f6f;
+  --text-color2: #89cc29;
+  --bg-color: #323232;
+  --dark-bg: #242526;
+  --icon-bg: #E7F5FB;
+  --h1-size: 50px;
+
+}
+
+.menu {
+  width: 250px;
+  font-family: sans-serif;
+  font-weight: 700;
+  position: fixed;
+  list-style: none;
+  line-height: 50px;
+  top: 100px;
+  right: 0;
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s ease;
+  background: var(--bg-color);
+  z-index: 1;
+}
+
+.menu li {
+  padding: 6px 8px;
+  margin: 10px 0;
+  transition: 0.5s ease;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 18px;
+}
+.menu button{
+  padding: 5px 7px;
+  border-radius: 15px;
+  border: 2px solid var(--text-color2)  ;
+  background: var(--text-color2);
+}
+
+.btn-box .menu-bar {
+  display: none;
+}
+
+.btn-box .menu-bar .bar {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  background: #fff;
+  border: 2px solid var(--text-color2);
+  border-radius: 10px;
+
+
+}
+
 @media screen and (max-width: 390px) {
-  navbar {
+  .navbar {
+    position: fixed;
     width: 100%;
-    display:flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+
+  }
+
+  .menu-bar ion-icon {
+    display: block;
+  }
+
+  .navbar .btn-box .btn-nav {
+    display: none;
+
+  }
+
+  .navbar .btn-box .menu-bar {
+    display: block;
+    border-radius: 20px;
   }
 }
 </style>
