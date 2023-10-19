@@ -142,7 +142,7 @@ h1 {
   }
 
   .slider-content {
-    width: 90%;
+    width: 100%;
   }
 
   #activeClasses {

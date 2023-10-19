@@ -120,6 +120,7 @@ export default {
 
 @media screen and (max-width: 390px) {
   .navbar {
+    left: 1px;
     position: fixed;
     width: 100%;
     display: flex;

@@ -180,6 +180,7 @@ export default
 
 @media screen and (max-width: 390px) {
     .footer {
+        width: 100%;
         row-gap: 10px;
         flex-direction: column;
     }

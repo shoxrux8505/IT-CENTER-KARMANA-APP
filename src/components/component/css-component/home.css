@@ -77,10 +77,13 @@
 }
 
 .contentbox .sphera .project-box {
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  
 }
 
 .contentbox .sphera .box {
@@ -448,8 +451,8 @@ small {
 
   .carousel-item h1 {
 
-    font-size: 20px;
-    text-align: center;
+    font-size: 18px;
+    /* text-align: center; */
     font-weight: 400px;
     transform: scale(0.5);
     margin-left: -100px;

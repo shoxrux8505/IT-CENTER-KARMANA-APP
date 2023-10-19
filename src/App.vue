@@ -72,8 +72,17 @@ export default {
 </script>
 
 <style>
+#app{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ 
+}
 body {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 ul {

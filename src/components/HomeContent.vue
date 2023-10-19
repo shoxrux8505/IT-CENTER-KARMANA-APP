@@ -8,9 +8,9 @@
               BIZ BILAN <br />
               KELAJAK KASBLARINI O'RGANING !
             </h1>
-           <a href="./component/center2.jpg" target="_blank">
-            <img src="./component/center2.jpg" class="d-block w-100" alt="..." />
-           </a>
+            <a href="./component/center2.jpg" target="_blank">
+              <img src="./component/center2.jpg" class="d-block w-100" alt="..." />
+            </a>
           </div>
           <div class="carousel-item">
             <img src="./component/markaz.jpg" class="d-block w-100" alt="..." />
@@ -218,7 +218,7 @@ export default {
 }
 
 .contentbox .sphera {
-  width: 700px;
+  width: 100%;
   height: 700px;
   display: flex;
   align-items: center;
@@ -231,15 +231,25 @@ export default {
 }
 
 @media screen and (max-width: 390px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .main-content {
     width: 100%;
+    /* padding: 20px; */
     display: flex;
     align-items: baseline;
   }
 
   .carousel-fade {
     width: 100%;
-    transform: scale(1.5);
+    transform: scale(1.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    margin-top: 100px;
   }
 
   .carousel-item h1 {
@@ -247,21 +257,33 @@ export default {
   }
 
   .card-container {
+    width: 100%;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 30px;
   }
 
   .project-box {
+    position: relative;
+    top: 30px;
+    left: 50px;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    row-gap: 20px;
+
+    row-gap: 50px;
   }
 
   .project-box .box {
-    transform: scale(0.7);
+    position: relative;
+    
+    padding: 20px;
+    transform: scale(0.5);
   }
 
   .project-box h1 {
-
     transform: scale(0.8);
   }
 
@@ -271,7 +293,10 @@ export default {
   }
 
   .contentbox .sphera h1 {
-    font-size: 25px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    font-size: 23px;
   }
 }
 </style>
